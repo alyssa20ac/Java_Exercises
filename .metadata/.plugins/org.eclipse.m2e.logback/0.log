@@ -1,0 +1,50 @@
+2024-10-11 15:42:12,911 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-10-11 15:44:15,433 [Worker-4: Auto share git projects] ERROR o.e.j.i.storage.file.FileRepository - Cannot read file C:\Users\Alyssa\.config\jgit\config
+org.eclipse.jgit.errors.ConfigInvalidException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:170)
+	at org.eclipse.jgit.util.SystemReader.updateAll(SystemReader.java:436)
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:357)
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:379)
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:327)
+	at org.eclipse.egit.core.internal.EclipseSystemReader.getUserConfig(EclipseSystemReader.java:106)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:162)
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:213)
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:147)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:720)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:678)
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:492)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:157)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Invalid line in config file
+	at org.eclipse.jgit.lib.Config.fromTextRecurse(Config.java:1212)
+	at org.eclipse.jgit.lib.Config.fromText(Config.java:1140)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.lambda$0(FileBasedConfig.java:156)
+	at org.eclipse.jgit.util.FileUtils.readWithRetries(FileUtils.java:726)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:133)
+	... 16 common frames omitted
+2024-10-11 15:44:15,448 [Worker-4: Auto share git projects] ERROR o.e.j.i.storage.file.FileRepository - Cannot read file C:\Users\Alyssa\.config\jgit\config
+org.eclipse.jgit.errors.ConfigInvalidException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:170)
+	at org.eclipse.jgit.util.SystemReader.updateAll(SystemReader.java:436)
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:357)
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:379)
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:327)
+	at org.eclipse.egit.core.internal.EclipseSystemReader.getUserConfig(EclipseSystemReader.java:106)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:162)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.build(FileRepositoryBuilder.java:55)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.create(FileRepositoryBuilder.java:75)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.autoIgnoreWorkspaceMetaData(ConnectProviderOperation.java:268)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:194)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Invalid line in config file
+	at org.eclipse.jgit.lib.Config.fromTextRecurse(Config.java:1212)
+	at org.eclipse.jgit.lib.Config.fromText(Config.java:1140)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.lambda$0(FileBasedConfig.java:156)
+	at org.eclipse.jgit.util.FileUtils.readWithRetries(FileUtils.java:726)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:133)
+	... 13 common frames omitted

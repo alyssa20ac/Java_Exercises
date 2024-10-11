@@ -1,0 +1,15 @@
+package IfElse;
+import java.util.Scanner;
+
+public class StudentGradeEvaluator {
+
+	public static void main(String[] args) {
+		 Scanner Scanner = new Scanner(Sytem.in)
+		
+		
+		
+		
+		
+	}
+
+}

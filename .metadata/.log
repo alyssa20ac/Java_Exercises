@@ -1,0 +1,138 @@
+!SESSION 2024-10-11 15:41:21.982 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-11 15:41:56.900
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-11 15:41:58.823
+!MESSAGE Logback config file: C:\Users\Alyssa\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-10-11 15:42:03.036
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-10-11 15:42:03.036
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-11 15:42:13.047
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Alyssa'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2024-10-11 15:44:15.438
+!MESSAGE Cannot read file C:\Users\Alyssa\.config\jgit\config
+!STACK 0
+org.eclipse.jgit.errors.ConfigInvalidException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:170)
+	at org.eclipse.jgit.util.SystemReader.updateAll(SystemReader.java:436)
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:357)
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:379)
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:327)
+	at org.eclipse.egit.core.internal.EclipseSystemReader.getUserConfig(EclipseSystemReader.java:106)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:162)
+	at org.eclipse.egit.core.CachingRepository.<init>(CachingRepository.java:40)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:213)
+	at org.eclipse.egit.core.RepositoryCache.lookupRepository(RepositoryCache.java:147)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:720)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:678)
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:492)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:157)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Invalid line in config file
+	at org.eclipse.jgit.lib.Config.fromTextRecurse(Config.java:1212)
+	at org.eclipse.jgit.lib.Config.fromText(Config.java:1140)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.lambda$0(FileBasedConfig.java:156)
+	at org.eclipse.jgit.util.FileUtils.readWithRetries(FileUtils.java:726)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:133)
+	... 16 more
+
+!ENTRY org.eclipse.egit.core 4 0 2024-10-11 15:44:15.439
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '../../.git', absolute path: 'C:/Users/Alyssa/eclipse-workspace/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:751)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:722)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:678)
+	at org.eclipse.egit.core.project.GitProjectData.setRepositoryMappings(GitProjectData.java:492)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:157)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2024-10-11 15:44:15.448
+!MESSAGE Cannot read file C:\Users\Alyssa\.config\jgit\config
+!STACK 0
+org.eclipse.jgit.errors.ConfigInvalidException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:170)
+	at org.eclipse.jgit.util.SystemReader.updateAll(SystemReader.java:436)
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:357)
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:379)
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:327)
+	at org.eclipse.egit.core.internal.EclipseSystemReader.getUserConfig(EclipseSystemReader.java:106)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:162)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.build(FileRepositoryBuilder.java:55)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.create(FileRepositoryBuilder.java:75)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.autoIgnoreWorkspaceMetaData(ConnectProviderOperation.java:268)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:194)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Invalid line in config file
+	at org.eclipse.jgit.lib.Config.fromTextRecurse(Config.java:1212)
+	at org.eclipse.jgit.lib.Config.fromText(Config.java:1140)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.lambda$0(FileBasedConfig.java:156)
+	at org.eclipse.jgit.util.FileUtils.readWithRetries(FileUtils.java:726)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:133)
+	... 13 more
+
+!ENTRY org.eclipse.egit.core 4 0 2024-10-11 15:44:15.450
+!MESSAGE Cannot read file C:\Users\Alyssa\.config\jgit\config
+!STACK 0
+java.io.IOException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:165)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.build(FileRepositoryBuilder.java:55)
+	at org.eclipse.jgit.storage.file.FileRepositoryBuilder.create(FileRepositoryBuilder.java:75)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.autoIgnoreWorkspaceMetaData(ConnectProviderOperation.java:268)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.connectProject(ConnectProviderOperation.java:194)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:115)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Cannot read file C:\Users\Alyssa\.config\jgit\config
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:170)
+	at org.eclipse.jgit.util.SystemReader.updateAll(SystemReader.java:436)
+	at org.eclipse.jgit.util.SystemReader.getJGitConfig(SystemReader.java:357)
+	at org.eclipse.jgit.util.SystemReader.getSystemConfig(SystemReader.java:379)
+	at org.eclipse.jgit.util.SystemReader.getUserConfig(SystemReader.java:327)
+	at org.eclipse.egit.core.internal.EclipseSystemReader.getUserConfig(EclipseSystemReader.java:106)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.<init>(FileRepository.java:162)
+	... 7 more
+Caused by: org.eclipse.jgit.errors.ConfigInvalidException: Invalid line in config file
+	at org.eclipse.jgit.lib.Config.fromTextRecurse(Config.java:1212)
+	at org.eclipse.jgit.lib.Config.fromText(Config.java:1140)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.lambda$0(FileBasedConfig.java:156)
+	at org.eclipse.jgit.util.FileUtils.readWithRetries(FileUtils.java:726)
+	at org.eclipse.jgit.storage.file.FileBasedConfig.load(FileBasedConfig.java:133)
+	... 13 more
